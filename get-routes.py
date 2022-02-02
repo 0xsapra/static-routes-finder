@@ -55,7 +55,7 @@ class JavaFileParser(FileParser):
 
         ### VERBMAPPING("")
         # .... \s* add between mapping and ()
-        self.regex_routes = re.compile('@(Patch|Get|Post|Put|Delete)Mapping\s*\(\s*(\s*path\s*=\s*|\s*value\s*=\s*)?"(.*)"') # previos @((Patch)Mapping|(Get)Mapping|(Post)Mapping|(Put)Mapping|(Delete)Mapping)\("(.+)\"\)
+        self.regex_routes = re.compile('@(Patch|Get|Post|Put|Delete)Mapping\s*\(\s*(\s*path\s*=\s*|\s*value\s*=\s*)?"(.*?)"') # previos @((Patch)Mapping|(Get)Mapping|(Post)Mapping|(Put)Mapping|(Delete)Mapping)\("(.+)\"\)
         self.regex_routes_edge_case = re.compile("""@(Patch|Get|Post|Put|Delete)Mapping\s*\n\s+""") 
         # Example
         #     @PostMapping
